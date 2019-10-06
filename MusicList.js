@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import { window, appColor } from './constants';
+import { Actions } from 'react-native-router-flux';
 
 const musics = [
   {
@@ -28,6 +29,12 @@ const musics = [
 const border = 5;
 
 export default class MusicList extends React.Component {
+
+  componentDidMount() {
+    setTimeout(() => {
+      Actions.publicity();
+    }, 3500)
+  }
 
   render() {
     return (

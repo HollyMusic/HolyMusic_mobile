@@ -17,8 +17,9 @@ export default AppRoutes = () => (
             title={route.title}
             initial={route.initial}
             component={route.component}
-            headerMode='none'
+            headerMode={route.modal ? 'screen' : 'none'}
             hideNavBar
+            modal={route.modal}
           />
         )
       }
